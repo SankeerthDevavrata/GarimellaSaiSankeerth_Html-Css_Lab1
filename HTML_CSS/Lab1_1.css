@@ -1,0 +1,56 @@
+body{
+    height: auto;
+    margin:0;
+    padding: 0;
+}
+header h1{
+    background-color: red;
+    text-align: right;
+    padding: 20px;
+    /* padding-right: 10px; */
+    margin: 0;
+}
+#nav_bar{
+    position: sticky;
+    top: 0%;
+    
+}
+.nav_items_menu{
+    background-color: rgb(0, 0, 0,0.5);
+    margin: 0;
+}
+.nav_items_menu li{
+    display: inline-block;
+    padding: 10px;
+}
+.nav_items_menu li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+.nav_items_menu li:hover{
+    background-color: rgb(0, 0, 0,0.7);
+}
+.nav_items_menu li:nth-child(2):hover .drop-menu , 
+.nav_items_menu li:nth-child(3):hover .drop-menu{
+    display: block;
+}
+.drop-menu li{
+    display: block;
+}
+.drop-menu{
+    position: absolute;
+    display: none;
+    background-color: whitesmoke;
+    padding: 0;
+    /* max-width: 150px; */
+    top: 43px;
+    /* right:auto */
+}
+.drop-menu li:hover{
+    background-color: gainsboro;
+}
+.drop-menu li a{
+    color: steelblue;
+    font-size: 16px;
+}

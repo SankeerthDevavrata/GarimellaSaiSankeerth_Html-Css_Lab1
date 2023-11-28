@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="Tailwind.css">
+</head>
+<body>
+  <nav class="sticky top-0 z-10">
+    <h2 class="w-full font-bold text-right p-5 bg-[red]">Demo of DropDown</h2>
+    <div class="flex bg-[gray]">
+
+        <a class="p-3 hover:bg-black hover:text-white" href="#">Link 1</a>    
+           <div class="relative group">
+            <a class="p-3 block hover:bg-black hover:text-white" href="#">Link 2</a>
+            <div class="absolute bg-gray-300 group-hover:block hidden">
+                <!-- <div class="relative group">
+                    <a href="#" class="pb-2 block px-3 hover:bg-gray-100 ">D_Link1</a>
+                    <div class="absolute left-full bg-gray-300 top-0 border-black-200">
+                        <a href="#" class="pb-2 block px-3 hover:bg-gray-100">DD_Link1</a>
+                        <a href="#" class="pb-2 block px-3 hover:bg-gray-100">DD_Link1</a>
+                        <a href="#" class="pb-2 block px-3 hover:bg-gray-100">DD_Link1</a>
+                        <a href="#" class="pb-2 block px-3 hover:bg-gray-100">DD_Link1</a>
+                    </div>
+                </div> -->
+                <a href="#" class="pb-2 block px-3 hover:bg-gray-100">D_Link1</a>
+                <a href="#" class="pb-2 block px-3 hover:bg-gray-100">D_Link2</a>
+                <a href="#" class="pb-2 block px-3 hover:bg-gray-100">D_Link3</a>
+            </div>
+            
+        </div>
+
+        <!-- <a class="p-3" href="#">Link 3</a> -->
+        <div class="relative group">
+            <a class="p-3 block hover:bg-black hover:text-white" href="#">Link 3</a>
+            <div class="absolute drop-menu top-full left-0 bg-gray-300 group-hover:block hidden">
+                <a href="#" class="pb-2 block px-3 hover:bg-gray-100">D_Link1</a>
+                <a href="#" class="pb-2 block px-3 hover:bg-gray-100">D_Link2</a>
+                <a href="#" class="pb-2 block px-3 hover:bg-gray-100">D_Link3</a>
+            </div>
+        </div>
+
+    </div>
+  </nav>
+
+  <div class="relative p-5 mx-auto mt-5 w-[450px] h-[550px] bg-gray-100">
+    <div class="flex justify-evenly">
+        <div>
+            <div class="h-[400px] w-[75px] bg-white relative">
+                <div class="h-[30%] bg-gray-400 absolute bottom-0 left-0 right-0" id="bar1"> </div>
+            </div>
+            <p class="text-center pt-4">30%</p>
+        </div>
+        <div>
+            <div class="h-[400px] w-[75px] bg-white relative">
+                <div class="h-[40%] bg-gray-400 absolute bottom-0 left-0 right-0" id="bar2"> </div>
+            </div>
+            <p class="text-center pt-4">40%</p>
+        </div>
+        <div>
+            <div class="h-[400px] w-[75px] bg-white relative">
+                <div class="h-[80%] bg-gray-400 absolute bottom-0 left-0 right-0" id="bar3"> </div>
+            </div>
+            <p class="text-center pt-4">80%</p>
+        </div>
+    </div>
+    <h1 class="font-bold pt-7 text-center">Bar Plot</h1>
+  </div>
+
+  <!-- <section class=" h-[100%] w-[100%] border border-black-200">
+
+  </section> -->
+  <section class=" relative h-[100%] w-[100%] mt-3" id="part3">
+    <div class="items-center justify-center">
+        <video class="absolute h-[100%] w-[100%]" autoplay muted loop src="/Background.mp4"></video>
+        <div class="h-[678.16px] w-[40%] relative m-auto items-center justify-center flex">
+            <form action="" class="flex flex-col p-6 w-[80%] border border-white">
+                <h1 class="mb-8 font-bold text-2xl">Create Gmail Account</h1>
+                <input class="p-2" type="text" placeholder="Full Name" required>
+                <br>
+                <input class="p-2" type="number" min="6000000000" max="9999999999" placeholder="Contact Number" required>
+                <br>
+                <input class="p-2" type="email" placeholder="Email Id" required>
+                <div class="flex">
+                    <button class="mr-4 mt-4 p-1 px-1 bg-[#778899] rounded-md">Reset</button>
+                    <button class="mr-4 mt-4 p-1 bg-[#778899] rounded-md">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+  </section>
+
+</body>
+</html>
+
+
+
+
+<!-- link 2 down and side bar  -->
+<!-- <div class="relative group">
+    <a class="p-3 block hover:bg-black hover:text-white" href="#">Link 2</a>
+
+    <div class="absolute drop-menu top-full left-0 bg-gray-300 group-hover:block hidden">
+        <div class="relative group" onmouseover="showDropdown('dLink1-dropdown')" onmouseout="hideDropdown('dLink1-dropdown')">
+            <a href="#" class="pb-2 block px-3 hover:bg-gray-100">D_Link1</a>
+            <div id="dLink1-dropdown" class="dropbox2 absolute left-full top-0 bg-gray-300 hidden">
+                <a href="#" class="pb-2 block px-3 hover:bg-gray-100">DD_Link1</a>
+                <a href="#" class="pb-2 block px-3 hover:bg-gray-100">DD_Link2</a>
+                <a href="#" class="pb-2 block px-3 hover:bg-gray-100">DD_Link3</a>
+                <a href="#" class="pb-2 block px-3 hover:bg-gray-100">DD_Link4</a>
+            </div>
+        </div>
+        <a href="#" class="pb-2 block px-3 hover:bg-gray-100">D_Link2</a>
+        <a href="#" class="pb-2 block px-3 hover:bg-gray-100">D_Link3</a>
+    </div>
+</div>
+
+<script>
+    function showDropdown(id) {
+        document.getElementById(id).classList.remove('hidden');
+    }
+
+    function hideDropdown(id) {
+        document.getElementById(id).classList.add('hidden');
+    }
+</script> -->
